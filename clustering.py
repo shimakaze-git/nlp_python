@@ -17,7 +17,9 @@ docs = np.array(messages_list)
 
 
 # Vectorize
-vectorizer = TfidfVectorizer(use_idf=True, token_pattern=u'(?u)\\b\\w+\\b')
+vectorizer = TfidfVectorizer(
+    use_idf=True, token_pattern=u'(?u)\\b\\w+\\b'
+)
 vecs = vectorizer.fit_transform(docs)
 
 print(vecs)

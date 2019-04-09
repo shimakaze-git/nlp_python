@@ -40,6 +40,7 @@ if __name__ == '__main__':
 
     target_day_nouns = []
     each_nouns = [split_text_only_noun(txt) for txt in txts]
+    print(each_nouns)
     all_nouns = " ".join(each_nouns)
     target_day_nouns.append(all_nouns)
 
@@ -59,3 +60,6 @@ if __name__ == '__main__':
     i = 0
     for x in extract_feature_words(terms, tfidfs, i, 10):
         print(x)
+
+    txt = '私はラーメンがとても大好きです。'
+    print(split_text_only_noun(txt))
