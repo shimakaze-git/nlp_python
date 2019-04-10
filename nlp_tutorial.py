@@ -19,6 +19,13 @@ def split_text_only_noun(text):
     return ' '.join(words)
 
 
+# コサイン類似度
+def cos_sim(v1, v2):
+    v1_v2 = np.dot(v1, v2)
+    v1_v2_norm = (np.linalg.norm(v1) * np.linalg.norm(v2))
+    return v1_v2 / v1_v2_norm
+
+
 python_1 = '''
 Python は強力で、学びやすいプログラミング言語です。
 効率的な高レベルデータ構造と、シンプルで効果的なオブジェクト指向プログラミング機構を備えています。
@@ -82,5 +89,12 @@ print("---------------------------------------------------")
 tfidf = TfidfTransformer(use_idf=True, norm='l2', smooth_idf=True)
 np.set_printoptions(precision=2)
 tf_idf = tfidf.fit_transform(bags)
-print(tf_idf)
-print(tf_idf.toarray())
+# print(tf_idf)
+# print(tf_idf.toarray())
+
+# cos類似度
+# 文書間の類似度
+# python_1とpython_2の文書比較
+a = tf_idf.toarray()[0]
+b = tf_idf.toarray()[1]
+print(cos_sim(a, b))
