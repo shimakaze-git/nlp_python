@@ -11,3 +11,4 @@
 # files
 
 - synonyms.py 類義語検索
+- wnjpn.py `wnjpn.db` の中身を確認
