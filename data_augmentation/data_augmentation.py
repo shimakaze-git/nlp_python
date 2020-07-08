@@ -1,5 +1,6 @@
 import MeCab
-from synonym import get_synonym_word, abstract_word
+from synonym import get_synonym_word
+# from synonym import get_synonym_word, abstract_word
 
 mecab = MeCab.Tagger("-Ochasen")
 mecab.parse('')
