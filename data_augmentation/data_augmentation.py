@@ -59,7 +59,7 @@ def get_word(nodes, index=0, sentence="", sentence_list=[]):
     elif nodes[index][1] == "名詞":
         candidate_words = []
         candidate_words += get_synonym_word(nodes[index][0])
-        candidate_words += abstract_word(nodes[index][0])
+        # candidate_words += abstract_word(nodes[index][0])
 
         get_word(
             nodes,
