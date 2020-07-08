@@ -3,3 +3,6 @@ wnjpn.db
 .history
 learn.xlsx
 output.txt
+data_augmentation/main.py
+data_augmentation/reader.py
+
