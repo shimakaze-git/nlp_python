@@ -12,6 +12,8 @@ mecab-python3 = "*"
 numpy = "*"
 requests = "*"
 gensim = "*"
+fastapi = "*"
+uvicorn = "*"
 
 [requires]
 python_version = "3.8"
