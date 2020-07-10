@@ -14,6 +14,8 @@ requests = "*"
 gensim = "*"
 fastapi = "*"
 uvicorn = "*"
+matplotlib = "*"
+wordcloud = "*"
 
 [requires]
 python_version = "3.8"
