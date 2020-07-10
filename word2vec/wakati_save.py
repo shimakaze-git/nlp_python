@@ -1,6 +1,6 @@
 from news_scrayping import get_news_articles
 from article_scraping import get_article
-from ma import split_text_only_noun
+from ma import split_text_only_noun, delete_word
 
 
 # 分かち書きしたデータをファイルに保存
@@ -18,12 +18,13 @@ def save_wakati_file(wakati_list, save_path='wakati.txt', add_flag=False):
 
 if __name__ == "__main__":
     keyword = '久保建英'
-    count = 50
+    count = 80
     articles = get_news_articles(keyword, count)
 
     list_text = []
     for path in articles:
         article = get_article(path)
+        article = delete_word(article)
         list_text += split_text_only_noun(article)
 
     save_wakati_file(list_text)
